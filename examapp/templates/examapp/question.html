@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subjects</title>
+    <title>Questions</title>
 </head>
 <body style="background-color: aliceblue;">
-    {% for subject in subjects %}
-        <a href="subject/{{ subject.id }}"><h3>{{subject.name}}</h3></a>
+    {% for question in questions %}
+        {% if id == question.subject.id %}
+            <h3>{{question.question}}</h3>
+        {% endif %}
     {% endfor %}
 </body>
 </html>
